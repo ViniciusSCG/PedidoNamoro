@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"> </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <title>Teste</title>
+    <script>
+      $(function() {
+      $('.btn-move').on({
+      mouseover: function() {
+        $(this).css({
+          left: (Math.random() * 200) + "px",
+          top: (Math.random() * 200) + "px",
+        });
+      }
+    });
+  });
+  $(function() {
+  var selectedClass = "";
+  $(".filter").click(function(){
+    selectedClass = $(this).attr("data-rel");
+    $("#gallery").fadeTo(100, 0.1);
+    $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+    setTimeout(function() {
+      $("."+selectedClass).fadeIn().addClass('animation');
+      $("#gallery").fadeTo(300, 1);
+    }, 300);
+  });
+});
+
+    </script>
+
+</head>
+
+<body>
+  
+  <div class="container-fluid">
+    <nav class="navbox" style="background-color: #e3f2fd;">
+      <div class="nav-logo">
+        <img  src="My project-1 (1).png" width="250" height="300" alt="">
+      </div>
+    </nav>
+    
+  </div>
+
+  <div class="container-bg">
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 d-flex justify-content-center mt-5 mb-5">
+    
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">Todas</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Maio</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Julho</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="3">Agosto</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="4">Setembro</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="5">Outubro</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="6">Novembro</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="7">Dezembro</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="8">Janeiro</button>
+        
+      </div>
+      <!-- Grid column -->
+    
+    </div>
+    <!-- Grid row -->
+    
+    <!-- Grid row -->
+    <div class="gallery foto-legenda" id="gallery">
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 3">
+        <img class="img-fluid" src="fotos/agosto/1.jpg"alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 8">
+        <img class="img-fluid" src="fotos/janeiro/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 2">
+        <img class="img-fluid" src="fotos/julho/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 1">
+        <img class="img-fluid" src="fotos/maio/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/1.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 4">
+        <img class="img-fluid" src="fotos/setembro/1.jpeg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/2.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/3.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/4.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/5.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/6.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/7.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/8.jpg" alt="Card image cap">
+      </div>
+      <!-- Grid column -->
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/9.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/10.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/11.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/12.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 6">
+        <img class="img-fluid" src="fotos/novembro/13.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/2.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/3.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/4.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/5.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/6.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/7.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 5">
+        <img class="img-fluid" src="fotos/outubro/8.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 4">
+        <img class="img-fluid" src="fotos/setembro/2.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 4">
+        <img class="img-fluid" src="fotos/setembro/3.jpeg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 3">
+        <img class="img-fluid" src="fotos/agosto/2.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/2.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/3.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/4.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/5.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/6.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/7.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 7">
+        <img class="img-fluid" src="fotos/dezembro/8.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 8">
+        <img class="img-fluid" src="fotos/janeiro/2.jpg" alt="Card image cap">
+      </div>
+      <div class="mb-3 pics animation all 2">
+        <img class="img-fluid" src="fotos/julho/2.jpg" alt="Card image cap">
+      </div>
+
+
+    </div>
+    <div class=" p-5 d-flex flex-column justify-content-center align-items-center text-center position-relative">
+      <button type="button" class="btn btn-lg btn-block btn-info justify-content-center rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal">
+        Deseja continuar tendo esses momentos comigo ?
+      </button>
+    </div>
+  </div>
+  </div>
+
+<!-- Button to Open the Modal -->
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">❤️</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h6>Julia, desde o primeiro momento em que te vi, eu soube que você era a pessoa certa para mim. Você me faz feliz de uma forma que eu nunca imaginei ser possível. Eu quero passar o resto da minha vida ao seu lado, me comprometo a te amar incondicionalmente e estar sempre aqui para você. Julia, você aceita ser minha namorada?"</h6>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button id="fireworks-btn" class="btn btn-success">SIM</button>
+        <button class="btn btn-danger btn-move">NÃO</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="fireworks-modal">
+  <div id="fireworks-container">
+    <div id="text-heart"></div>
+  </div>
+</div>
+
+
+
+  <!-- <div class="container-fluid d-flex align-items-center justify-content-between">
+
+
+    <section class="d-flex align-items-center">
+      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+        <h2>skadkaskdjkasjd akjdsa jsadkdajdskajda djias dsadadaddsadasdadas dadwda</h2>
+        <div class="d-flex">
+          <button class="btn btn-outline-success">SIM</button>
+          <button class="btn btn-outline-danger btn-move">NÃO</button>
+        </div>
+      </div>
+    </section> 
+  </div>
+
+   -->
+   <script>
+    // Obtém a referência do botão e do modal
+    const btn = document.getElementById("fireworks-btn");
+    const modal = document.getElementById("fireworks-modal");
+    const container = document.getElementById("fireworks-container");
+  
+    // Adiciona um evento de clique ao botão
+    btn.addEventListener("click", () => {
+      modal.style.display = "block";
+      createFireworks();
+    });
+    
+  
+  function createHeart() {
+    // Variáveis para armazenar as coordenadas do coração
+    let x, y;
+  
+    // Loop para criar cada ponto do coração
+    for (let i = 0; i < 360; i++) {
+      // Calcula as coordenadas do ponto atual
+      x = 16 * Math.pow(Math.sin(i), 3);
+      y = -(13 * Math.cos(i) - 5 * Math.cos(2 * i) - 2 * Math.cos(3 * i) - Math.cos(4 * i));
+  
+      // Cria um novo fogo de artifício
+      const spark = document.createElement("div");
+      
+      container.appendChild(spark);
+  
+      // Adiciona a classe CSS para estilizar o fogo de artifício
+      spark.classList.add("spark");
+  
+      // Define a posição do fogo de artifício de acordo com as coordenadas calculadas
+      const scale = 12.0;
+      spark.style.left = `calc(50% + ${x * scale}px)`;
+      spark.style.top = `calc(50% + ${y * scale}px)`;
+  
+      // Cria a animação do fogo de artifício
+      anime({
+        targets: spark,
+        duration: 2000,
+        easing: "easeOutExpo",
+        scale: [0, 1],
+        delay: anime.random(0, 1000),
+        complete: function(anim) {
+          spark.remove();
+        }
+      });
+    }
+    
+  }
+  
+    // Função para criar os fogos de artifício
+    function createFireworks() {
+      for (let i = 0; i < 100; i++) {
+        // Cria um elemento <div> para representar o fogo de artifício
+        const spark = document.createElement("div");
+        container.appendChild(spark);
+  
+        // Adiciona a classe CSS para estilizar o fogo de artifício
+        spark.classList.add("spark");
+  
+        // Define a posição inicial do fogo de artifício
+        spark.style.left = `${Math.random() * 100}%`;
+        spark.style.top = `${Math.random() * 100}%`;
+  
+        // Cria a animação do fogo de artifício usando o anime.js
+  anime({
+      targets: spark,
+      duration: anime.random(1000,2000),
+      easing: "easeOutExpo",
+      translateX: anime.random(-100, 100),
+      translateY: anime.random(-100, 100),
+      rotate: anime.random(-360, 360),
+      scale: [0, 1],
+      delay: anime.random(0, 1000),
+      complete: function(anim) {
+          spark.remove();
+          createHeart();
+      },
+  });
+      }
+      // Cria um elemento de texto para exibir a mensagem
+const message = document.createElement("H5");
+message.innerHTML = "PARABÉNS, VOCÊ FEZ A ESCOLHA CERTA";
+
+// Adiciona o elemento de texto ao container
+container.appendChild(message);
+
+// Define a posição do elemento de texto para o centro do coração
+message.style.left = "50%";
+message.style.top = "50%";
+
+// Centralizar o texto
+message.style.textAlign = "center";
+      
+    }
+  </script>
+  
+</body>
+</html>
