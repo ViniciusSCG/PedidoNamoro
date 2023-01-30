@@ -275,6 +275,7 @@
       <!-- Modal footer -->
       <div class="modal-footer">
         <button id="fireworks-btn" class="btn btn-success">SIM</button>
+        <audio id="fireworks-sound" src="somFogos.mp3"></audio>
         <button class="btn btn-danger btn-move">NÃO</button>
       </div>
 
@@ -310,10 +311,13 @@
     const btn = document.getElementById("fireworks-btn");
     const modal = document.getElementById("fireworks-modal");
     const container = document.getElementById("fireworks-container");
+    const sound = document.getElementById("fireworks-sound");
   
     // Adiciona um evento de clique ao botão
     btn.addEventListener("click", () => {
       modal.style.display = "block";
+      sound.currentTime = 0;
+      sound.play();
       createFireworks();
     });
     
